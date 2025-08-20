@@ -1,0 +1,34 @@
+{
+  "name": "Telegram Info Bot",
+  "description": "A Telegram bot that provides information about users, groups, and channels",
+  "repository": "https://github.com/yourusername/telegram-info-bot",
+  "logo": "https://telegram.org/img/t_logo.png",
+  "keywords": ["telegram", "bot", "user-info", "group-info"],
+  "image": "heroku/nodejs",
+  "env": {
+    "TELEGRAM_BOT_TOKEN": {
+      "description": "Your Telegram bot token from @BotFather",
+      "required": true
+    },
+    "NODE_ENV": {
+      "description": "Node environment",
+      "value": "production",
+      "required": true
+    },
+    "HEROKU_URL": {
+      "description": "Your Heroku app URL (will be auto-filled)",
+      "required": false
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "free"
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ]
+}
